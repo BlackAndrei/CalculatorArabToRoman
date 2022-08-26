@@ -85,6 +85,7 @@ public class CalculArabToRoman {
            } // если вводим V - X то получаем такое исключение и закрываемся
     }
     private static int NumRoman(String roman) throws Exception {
+        // тут я ничего умнее не придумал, как просто в ифах прогнать ввод римскими до 100, где после 10 будет выброшено исключение
         try{
         if (roman.equals("I")){return 1;} if (roman.equals("II")){return 2;} if(roman.equals("III")){return 3;}
         if (roman.equals("IV")){return 4;} if (roman.equals("V")){return 5;} if(roman.equals("VI")){return 6;}
@@ -104,7 +105,7 @@ public class CalculArabToRoman {
             if (roman.equals("XC")){return 90;}if (roman.equals("XCI")){return 91;}if (roman.equals("XCII")){return 92;}if (roman.equals("XCIII")){return 93;}if (roman.equals("XCIV")){return 94;}if (roman.equals("XCV")){return 95;}if (roman.equals("XCVI")){return 96 ;}if (roman.equals("XCVII")){return 97;}
             if (roman.equals("XCVIII")){return 98;}if (roman.equals("XCIX")){return 99;}if (roman.equals("C")){return 100;}
     }catch (InputMismatchException e){throw new RuntimeException("throws Exception //т.к. используются одновременно разные системы счисления");}
-    return -1; } // тут я ничего умнее не придумал, как просто в ифах прогнать ввод римскими до 100, где после 10 будет выброшено исключение
+    return -1; }
 
     //собственно и сам свитч кейс, где при успешном нахождении знака мы выполняем соответствующее действие.
     private static int calcul(int n1, int n2, char operation) {
